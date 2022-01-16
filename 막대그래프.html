@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Graph</title>
+</head>
+<body>
+
+    <style>
+        body { padding: 50px;}
+        .graph { height: 40px; margin-bottom: 20px; background: #ccc; border-radius: 40px;}
+        .graph > span { display: block; padding: 0 10px; height: 40px; line-height: 40px; 
+            text-align: right;  border-radius: 40px; box-sizing: border-box; color:#fff;
+        }
+        
+        .graph.stack1 span { background: violet; animation: stack1 2s 1;}
+        .graph.stack2 span { background: skyblue; animation: stack2 2s 1;}
+        .graph.stack3 span { background: palegreen; animation: stack3 2s 1;}
+        .graph.stack4 span { background: orange; animation: stack4 2s 1;}
+        
+        @keyframes stack1 {
+            0% { width: 0; color: rgba(255, 255, 255, 0)}
+            40% { color: rgba(255, 255, 255, 1 )}
+            100% { width: 75%;}
+        }
+
+        @keyframes stack2 {
+            0% { width: 0; color: rgba(255, 255, 255, 0)}
+            40% { color: rgba(255, 255, 255, 1 )}
+            100% { width: 60%;}
+        }
+
+        @keyframes stack3 {
+            0% { width: 0; color: rgba(255, 255, 255, 0)}
+            40% { color: rgba(255, 255, 255, 1 )}
+            100% { width: 40%;}
+        }
+
+        @keyframes stack4 {
+            0% { width: 0; color: rgba(255, 255, 255, 0)}
+            40% { color: rgba(255, 255, 255, 1 )}
+            100% { width: 25%;}
+        }
+        
+    </style>
+
+    <div class="graph stack1">
+        <span style="width: 75%;">75%</span>
+    </div>
+
+    <div class="graph stack2">
+        <span style="width: 60%;">60%</span>
+    </div>
+
+    <div class="graph stack3">
+        <span style="width: 40%;">40%</span>
+    </div>
+
+    <div class="graph stack4">
+        <span style="width: 25%;">25%</span>
+    </div>
+
+</body>
+</html>
