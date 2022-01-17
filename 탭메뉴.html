@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Menu</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+
+    <style>
+        .tab_content{
+            width: 500px; height: auto; margin: 0 auto;
+        }
+
+        input {display: none;}
+        input + label {display: inline-block; padding: 15px; background: #ccc; color:#999; font-style: 14px; cursor: pointer;
+        }
+        input:checked + label {background: #aaa; color:#000;}
+
+        .conbox{width: 500px; height: 600px; background: #aaa; display: none;}
+
+        #tab01:checked ~ .con1{display: block;}
+        #tab02:checked ~ .con2{display: block;}
+        #tab03:checked ~ .con3{display: block;}
+        #tab04:checked ~ .con4{display: block;}
+
+        
+    </style>
+
+    <div class="tab_content">
+            <input type="radio" name="tabmenu" id="tab01" checked>  <!--name="tabmenu" 중복처리-->
+            <label for="tab01">컨텐츠탭버튼01</label>
+            <input type="radio" name="tabmenu" id="tab02">
+            <label for="tab02">컨텐츠탭버튼02</label>
+            <input type="radio" name="tabmenu" id="tab03">
+            <label for="tab03">컨텐츠탭버튼03</label>
+            <input type="radio" name="tabmenu" id="tab04">
+            <label for="tab04">컨텐츠탭버튼04</label>
+
+        <div class="conbox con1">컨텐츠탭 내용01</div>
+        <div class="conbox con2">컨텐츠탭 내용02</div>
+        <div class="conbox con3">컨텐츠탭 내용03</div>
+        <div class="conbox con4">컨텐츠탭 내용04</div>
+    </div>
+</body>
+</html>
