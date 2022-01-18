@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+
+    <style>
+        .gallerylist{
+            width: 800px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        .gallerylist > ul {
+            display: flex;
+            justify-content: space-around;
+        }
+        .gallerylist > ul > li > a {text-decoration: none; }
+        .gallerylist > ul > li > a > .screen{ position: relative; overflow: hidden;}
+        .gallerylist > ul > li > a > .screen > .top{
+            position: absolute;
+            top:-40px;
+            left:30px;
+            z-index: 2;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+            transition: all .35s;
+        }
+        .gallerylist > ul > li > a > .screen > .bottom{
+            position: absolute;
+            bottom: -40px;
+            left: 30px;
+            z-index: 2;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all .35s;
+        }
+        .gallerylist > ul > li > a > div:nth-of-type(2) > h3 { text-align: center; font-size: 11px;}
+        .gallerylist > ul > li > a:hover > .screen > .top {top: 40px;}
+        .gallerylist > ul > li > a:hover > .screen > .bottom {bottom: 40px;}
+
+        .gallerylist > ul > li > a > .screen::after{
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+            opacity: 0;
+            transition: all .35s;
+        }
+        .gallerylist > ul > li > a:hover > .screen::after{
+            opacity: 1;
+        }
+    </style>
+
+
+    <div class="gallerylist">
+        <ul>
+
+            <li>
+                <a href="#">
+                    <div class="screen">
+                        <div class="top">NIKE SB</div>
+                        <div class="bottom">마우스 HOVER효과</div>
+                        <img src="./img/nike.png" alt="나이키">
+                    </div>
+                    <div>
+                        <h3>이미지 위에 오브젝트가 나타나는 효과</h3>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <div class="screen">
+                        <div class="top">NIKE SB</div>
+                        <div class="bottom">마우스 HOVER효과</div>
+                        <img src="./img/nike.png" alt="나이키">
+                    </div>
+                    <div>
+                        <h3>이미지 위에 오브젝트가 나타나는 효과</h3>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <div class="screen">
+                        <div class="top">NIKE SB</div>
+                        <div class="bottom">마우스 HOVER효과</div>
+                        <img src="./img/nike.png" alt="나이키">
+                    </div>
+                    <div>
+                        <h3>이미지 위에 오브젝트가 나타나는 효과</h3>
+                    </div>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</body>
+</html>
