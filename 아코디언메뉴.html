@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+
+    <style>
+        input[id*="answer"]{
+            display: none;
+        }
+        input[id*="answer"] + label{
+            position: relative;
+            display: block;
+            width: 400px;
+            height: 50px;
+            border: 1px solid #232188;
+            border-bottom: 0;
+            color:#fff;
+            font-weight: 900;
+            background-color: #3634a5;
+            cursor: pointer;
+            line-height: 50px;
+            box-sizing: border-box;
+        }
+        input[id*="answer"] + label em{
+            position: absolute;
+            top:10px; right:10px;
+            width: 30px; height: 30px;
+            background-image: url(./img/down_arrow.png);
+        }
+        input[id*="answer"] + label + div{
+            height: 0;
+            transition: all .35s;
+            overflow: hidden;
+            background-color: violet;
+            width: 400px;
+        }
+        input[id*="answer"]:checked + label em {
+            background-image: url(./img/up_arrow.png);
+        }
+        input[id*="answer"]:checked + label + div {
+            height: 100px;
+        }
+    </style>
+
+
+    <div class="accordion">
+        <input type="checkbox" id="answer01">
+        <label for="answer01">컨텐츠 제목 부분<em></em></label>
+        <div>
+            <p>
+                서브 내용 이곳에서 자연스럽게 나오는 효과를 볼수있습니다.
+            </p>
+        </div>
+
+        <input type="checkbox" id="answer02">
+        <label for="answer02">컨텐츠 제목 부분<em></em></label>
+        <div>
+            <p>
+                서브 내용 이곳에서 자연스럽게 나오는 효과를 볼수있습니다.
+            </p>
+        </div>
+
+        <input type="checkbox" id="answer03">
+        <label for="answer03">컨텐츠 제목 부분<em></em></label>
+        <div>
+            <p>
+                서브 내용 이곳에서 자연스럽게 나오는 효과를 볼수있습니다.
+            </p>
+        </div>
+
+        <input type="checkbox" id="answer04">
+        <label for="answer04">컨텐츠 제목 부분<em></em></label>
+        <div>
+            <p>
+                서브 내용 이곳에서 자연스럽게 나오는 효과를 볼수있습니다.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
