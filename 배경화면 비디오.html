@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Video</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+
+    <style>
+        header{
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+        } 
+        header > h1 > a {
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 900;
+            color: #fff;
+            padding: 60px;
+            text-decoration: none;
+        }
+
+        header > h1 > a:hover {
+            text-decoration: none;
+        }
+
+        .main_nav {
+            position: absolute;
+            top:0; right:0;
+            padding: 60px;
+            display: flex;
+        }
+        .main_nav > a {
+            color:#fff;
+            font-size: 20px;
+            font-weight: 900;
+            margin: 0 30px;
+            text-decoration: none;  
+        }
+        .main_nav > a:hover {
+            color:orange;
+            transition: all .35s;
+        }
+        .main_nav > a:hover > .under{
+            height: 2px;
+            margin-top: 5px;
+            background: orange;
+            animation: underline .6s 1;
+        }
+
+        @keyframes underline {
+            0%{width: 0;}
+            100%{width: 100%;}
+        }
+
+        .container{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .text {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            margin-top: 40vh;
+
+        }
+        .text > h1 {
+            color:#fff;
+            font-size: 30px;
+            text-align: center;
+        }
+        .text > p {
+            margin-top: 30px;
+            color: #fff;
+            font-size: 15px;
+            
+        }
+    </style>
+
+    <header>
+        <h1><a href="#">LOGO</a></h1>
+        <nav class="main_nav">
+            <a href="#">MAIN<div class="under"></div></a>
+            <a href="#">ABOUT US<div class="under"></div></a>
+            <a href="#">CONTENT<div class="under"></div></a>
+            <a href="#">SHOP<div class="under"></div></a>
+            <a href="#">INFO<div class="under"></div></a>               
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="video_background">
+            <video src="./mp4/688772028.mp4" muted autoplay loop></video>
+        </div>
+        <div class="text">
+            <h1>Lorem Ipsum</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam scelerisque euismod ullamcorper. Aliquam molestie placerat nisi ac semper. Nunc quis molestie diam. Pellentesque auctor lacus non varius interdum. Mauris quis ornare libero. Ut vitae justo nec est viverra eleifend. Nulla dapibus sem ut libero varius sagittis. Duis id elit eget est tempor sagittis. Donec diam tellus, sagittis quis porttitor in, aliquet a mi. Phasellus quis ultrices tortor, et pharetra quam. Etiam convallis nibh id placerat pretium.</p>
+        </div>
+    </div>
+
+</body>
+</html>
